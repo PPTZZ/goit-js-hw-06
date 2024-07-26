@@ -10,9 +10,11 @@ const desytoryBtn = document.querySelector('button[data-destroy]');
 const container = document.querySelector('#boxes');
 
 createBtn.addEventListener('click', () => {
+  let boxDimentions = 30;
 	for (let i = 0; i < input.value; i++) {
-		const box = `<div style="height:30px;width:30px;background:${getRandomHexColor()}"></div>`;
+		const box = `<div style="height:${boxDimentions}px;width:${boxDimentions}px;background:${getRandomHexColor()}"></div>`;
 		container.insertAdjacentHTML('beforeend', box);
+    boxDimentions += 10;
 	}
 });
 
